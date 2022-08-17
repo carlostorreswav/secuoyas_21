@@ -1,7 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+let nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  pageExtensions: ["page.js", "api.js"],
+  rewrites: async () => {
+    return [
+      {
+        source: "/api/(.*)",
+        destination: "/api",
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

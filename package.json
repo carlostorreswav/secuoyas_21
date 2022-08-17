@@ -11,10 +11,15 @@
   "dependencies": {
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-spring": "^9.5.2",
+    "styled-components": "^5.3.5",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5"
+    "eslint-config-next": "12.2.5",
+    "babel-plugin-styled-components": "^2.0.7"
   }
 }
