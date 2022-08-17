@@ -1,4 +1,3 @@
-import "../styles/globals.css"
 import { ImpulseProvider } from "@impulse/contexts"
 
 function MyApp({ Component, pageProps }) {
