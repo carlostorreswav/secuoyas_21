@@ -62,7 +62,7 @@ fontSizesHeading.m = fontSizesHeading[1]
 fontSizesHeading.l = fontSizesHeading[2]
 
 const colors = {
-  ui01: "#202020",
+  ui01: "#FFFFFF",
   ui02: "#282828",
   ui03: "#121212",
   ui04: "#181818",

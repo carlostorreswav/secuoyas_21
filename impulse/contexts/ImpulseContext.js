@@ -5,8 +5,7 @@ import { theme } from "@impulse/components"
 
 const GlobalStyle = createGlobalStyle`  
   body {
-    background-color: #121212;
-    color: white;
+    color: black;
     margin: 0;
     padding: 0;
     position: relative;

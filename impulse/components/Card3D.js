@@ -46,7 +46,13 @@ const Card3D = ({
     if (active) {
       setSpringProps(value)
     }
-    setHover(open)
+    if (open === true) {
+      setHover(true)
+    } else {
+      setTimeout(() => {
+        setHover(false)
+      }, 200)
+    }
   }
 
   return (
