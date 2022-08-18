@@ -1,29 +1,30 @@
-const { Box, Text, Card3D } = require("@impulse/components")
+const { Box, Text, Card3D, Image, Link } = require("@impulse/components")
 import { useState } from "react"
 import styled from "styled-components"
-import Things_21 from "./Things_21.json"
+import CardArray from "./CardArray"
 
 const Card = props => {
-  const { content, title } = props
-  const [show, setShow] = useState(true)
+  console.log("Card props", props)
+  const { front, back } = props
+  const [isFront, setisFront] = useState(true)
 
   return (
     <Box
       position="relative"
       height="450px"
       style={{ perspective: "1000px" }}
-      onClick={() => setShow(!show)}
+      onClick={() => setisFront(!isFront)}
       w="100%"
       cursor="pointer"
     >
       <Box style={{ transformStyle: "preserve-3d" }}>
-        <CustomBox transform={show ? "rotateY(0deg)" : "rotateY(180deg)"}>
-          {title}
+        <CustomBox transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}>
+          {front}
         </CustomBox>
       </Box>
       <Box style={{ transformStyle: "preserve-3d" }}>
-        <CustomBox transform={!show ? "rotateY(-0deg)" : "rotateY(-180deg)"}>
-          {content}
+        <CustomBox transform={!isFront ? "rotateY(-0deg)" : "rotateY(-180deg)"}>
+          {back}
         </CustomBox>
       </Box>
     </Box>
@@ -37,7 +38,7 @@ const CustomBox = styled(Box)`
   left: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   height: 450px;
-  border: 2px solid black;
+  border: 3px solid black;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -45,26 +46,75 @@ const CustomBox = styled(Box)`
 `
 
 const Home = () => {
+  CardArray.map(card => console.log("card", card))
   return (
     <Box>
-      <Text ta="center" fs="xl" fw="bold" m="0">
-        Hello World
-      </Text>
-      <Box
-        display="flex"
-        flexWrap="wrap"
-        jc="center"
-        maxWidth="1200px"
-        m="0 auto"
-        mt="xxxl"
-      >
-        {Things_21.map((thing, index) => (
-          <Box w="30%" mw="400px">
-            <Card3D factorY={40} factorX={20} zoom={1.2}>
-              <Card key={index} {...thing} />
-            </Card3D>
-          </Box>
-        ))}
+      <Link href="https://secuoyas.com">
+        <Box display="flex" ai="center" m="m">
+          <Image src="media/headLogo.png" />
+          <Text ta="left" fs="xl" fw="bold" m="0" ml="xs">
+            innovation by desing
+          </Text>
+        </Box>
+      </Link>
+      <Box maxWidth="1200px" m="0 auto" mt="xxxl">
+        <Box h="300px" b="3px solid black">
+          <Head />
+        </Box>
+        <Box display="flex" flexWrap="wrap" jc="center" ml="-4px">
+          {CardArray.map((card, index) => (
+            <Box w="33.1%" key={index}>
+              <Card3D factorY={40} factorX={20} zoom={1.1}>
+                <Card {...card} />
+              </Card3D>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+    </Box>
+  )
+}
+
+const Head = () => {
+  return (
+    <Box position="relative" h="100%">
+      <Box mt="l" ml="xl" position="relative" zIndex="1">
+        <Text
+          ta={{ default: "center", m: "left" }}
+          fs={{ default: "55px", m: "80px" }}
+          fw="bold"
+          m="0"
+        >
+          Cumplimos
+        </Text>
+        <Box display="flex" mt="-10px">
+          <Text
+            ta={{ default: "center", m: "left" }}
+            fs="80px"
+            fw="bold"
+            m="0"
+            color="ui02"
+          >
+            21&nbsp;
+          </Text>
+          <Text ta={{ default: "center", m: "left" }} fs="80px" fw="bold" m="0">
+            años
+          </Text>
+        </Box>
+        <Text ta={{ default: "center", m: "left" }} m="0">
+          y lo queremos celebrar contándote 21 cosas que
+        </Text>
+        <Text ta={{ default: "center", m: "left" }} m="0">
+          no sabías de Secuoyas.
+        </Text>
+      </Box>
+      <Box display={{ default: "none", m: "block" }}>
+        <Box position="absolute" bottom="-80px" right="1px">
+          <Image src="media/head1.png" />
+        </Box>
+        <Box position="absolute" bottom="28px" right="1px">
+          <Image src="media/head2.png" />
+        </Box>
       </Box>
     </Box>
   )
