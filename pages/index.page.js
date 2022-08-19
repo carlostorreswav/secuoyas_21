@@ -88,7 +88,7 @@ const Head = () => {
   return (
     <Box b="3px solid black" mw="1224px" m="0 auto">
       <Box position="relative" h="100%">
-        <Box p="xl" position="relative" zIndex="1">
+        <Box py="120px" px="xl" position="relative" zIndex="1">
           <Text
             ta={{ default: "center", m: "left" }}
             fs={{ default: "50px", s: "55px", m: "80px" }}
