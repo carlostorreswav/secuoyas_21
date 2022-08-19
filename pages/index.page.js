@@ -122,7 +122,7 @@ const Head = () => {
             ta={{ default: "center", m: "left" }}
             m={{ default: "0 auto", m: "0" }}
             mw="400px"
-            fontFamily="sans-serif"
+            fontFamily="Work Sans"
             fs="18px"
           >
             y lo queremos celebrar contándote 21 cosas que no sabías de

@@ -11,6 +11,10 @@ export default class MyDocument extends Document {
             href="https://fonts.cdnfonts.com/css/gilroy-bold"
             rel="stylesheet"
           ></link>
+          <link
+            href="http://fonts.cdnfonts.com/css/work-sans"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />
