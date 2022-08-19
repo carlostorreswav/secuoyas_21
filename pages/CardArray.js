@@ -5,12 +5,30 @@ const MainBox = styled(Box)`
   height: 100%;
 `
 
+const Video = styled.video`
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
+  object-position: center;
+`
+
 const Card01 = {
   front: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
-        Front
-      </Text>
+    <MainBox
+      onMouseEnter={() => document.getElementById("vid01").play()}
+      onMouseLeave={() => document.getElementById("vid01").pause()}
+      position="relative"
+    >
+      <Box position="absolute" width="100%" height="100%" zIndex="1">
+        <Text ta="center" fs="xl" fw="bold" m="0">
+          Front
+        </Text>
+      </Box>
+      <Box position="absolute" bottom="-0px" height="100%" zIndex="0">
+        <Video autoPlay loop width="100%" height="100%" id="vid01">
+          <source src="video/test1.mov" type="video/mp4" />
+        </Video>
+      </Box>
     </MainBox>
   ),
   back: (
