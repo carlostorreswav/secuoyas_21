@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
         <Head>
           {/* link your fonts here */}
           <link
-            href="http://fonts.cdnfonts.com/css/gilroy-bold"
+            href="https://fonts.cdnfonts.com/css/gilroy-bold"
             rel="stylesheet"
           ></link>
         </Head>
