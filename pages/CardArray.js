@@ -42,10 +42,21 @@ const Card01 = {
 
 const Card02 = {
   front: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
-        Front
-      </Text>
+    <MainBox
+      onMouseEnter={() => document.getElementById("vid02").play()}
+      onMouseLeave={() => document.getElementById("vid02").pause()}
+      position="relative"
+    >
+      <Box position="absolute" width="100%" height="100%" zIndex="1">
+        <Text ta="center" fs="xl" fw="bold" m="0">
+          Front
+        </Text>
+      </Box>
+      <Box position="absolute" bottom="-0px" height="100%" zIndex="0">
+        <Video autoPlay loop width="100%" height="100%" id="vid02">
+          <source src="video/test1.mov" type="video/mp4" />
+        </Video>
+      </Box>
     </MainBox>
   ),
   back: (
@@ -59,10 +70,21 @@ const Card02 = {
 
 const Card03 = {
   front: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
-        Front
-      </Text>
+    <MainBox
+      onMouseEnter={() => document.getElementById("vid03").play()}
+      onMouseLeave={() => document.getElementById("vid03").pause()}
+      position="relative"
+    >
+      <Box position="absolute" width="100%" height="100%" zIndex="1">
+        <Text ta="center" fs="xl" fw="bold" m="0">
+          Front
+        </Text>
+      </Box>
+      <Box position="absolute" bottom="-0px" height="100%" zIndex="0">
+        <Video autoPlay loop width="100%" height="100%" id="vid03">
+          <source src="video/test1.mov" type="video/mp4" />
+        </Video>
+      </Box>
     </MainBox>
   ),
   back: (
