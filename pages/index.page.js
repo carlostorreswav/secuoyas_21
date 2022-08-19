@@ -52,14 +52,16 @@ const Home = () => {
   CardArray.map(card => console.log("card", card))
   return (
     <Box>
-      <Link href="https://secuoyas.com">
-        <Box display="flex" ai="center" m="m">
-          <Image src="media/headLogo.png" />
-          <Text ta="left" fs="xl" fw="bold" m="0" ml="xs" color="black">
-            innovation by desing
-          </Text>
-        </Box>
-      </Link>
+      <Box maxWidth="1224px" w="100%" m="0 auto" mt="10px">
+        <Link href="https://secuoyas.com">
+          <Box display="flex" ai="center" mt="l">
+            <Image src="media/headLogo.png" />
+            <Text ta="left" fs="xl" fw="bold" m="0" ml="xs" color="black">
+              innovation by desing
+            </Text>
+          </Box>
+        </Link>
+      </Box>
       <Box display="flex" jc="center" my="xxxl">
         <Box maxWidth="1400px" w="100%" mx="xl" mt="10px">
           <Head />
