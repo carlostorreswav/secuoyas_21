@@ -86,7 +86,7 @@ const Home = () => {
 
 const Head = () => {
   return (
-    <Box b="3px solid black" m="-3px">
+    <Box b="3px solid black" mw="1224px" m="0 auto">
       <Box position="relative" h="100%">
         <Box p="xl" position="relative" zIndex="1">
           <Text
