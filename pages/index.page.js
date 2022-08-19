@@ -69,7 +69,7 @@ const Home = () => {
               <Box
                 // w={{ default: "100%", s: "50%", l: "33.33%" }}
                 w="392px"
-                m="10px"
+                m="12px"
                 key={index}
               >
                 <Card3D factorY={40} factorX={20} zoom={1.1}>
