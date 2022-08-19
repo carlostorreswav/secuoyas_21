@@ -14,8 +14,8 @@ const Card01 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -31,8 +31,8 @@ const Card02 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -48,8 +48,8 @@ const Card03 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -65,8 +65,8 @@ const Card04 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -82,8 +82,8 @@ const Card05 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -99,8 +99,8 @@ const Card06 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -116,8 +116,8 @@ const Card07 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -133,8 +133,8 @@ const Card08 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -150,8 +150,8 @@ const Card09 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -167,8 +167,8 @@ const Card10 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -184,8 +184,8 @@ const Card11 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -201,8 +201,8 @@ const Card12 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -218,8 +218,8 @@ const Card13 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -235,8 +235,8 @@ const Card14 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -252,8 +252,8 @@ const Card15 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -269,8 +269,8 @@ const Card16 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -286,8 +286,8 @@ const Card17 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -303,8 +303,8 @@ const Card18 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -320,8 +320,8 @@ const Card19 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -337,8 +337,8 @@ const Card20 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
@@ -354,8 +354,8 @@ const Card21 = {
     </MainBox>
   ),
   back: (
-    <MainBox>
-      <Text ta="center" fs="xl" fw="bold" m="0">
+    <MainBox bg="ui02">
+      <Text ta="center" fs="xl" fw="bold" m="0" color="ui01">
         Back
       </Text>
     </MainBox>
