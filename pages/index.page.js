@@ -89,20 +89,24 @@ const Home = () => {
 const Head = () => {
   return (
     <Box b="3px solid black" mw="1224px" m="0 auto">
+      <link
+        href="http://fonts.cdnfonts.com/css/gilroy-bold"
+        rel="stylesheet"
+      ></link>
       <Box position="relative" h="100%">
-        <Box py="120px" px="xl" position="relative" zIndex="1">
+        <Box py="100px" px="xl" position="relative" zIndex="1">
           <Text
             ta={{ default: "center", m: "left" }}
-            fs={{ default: "50px", s: "55px", m: "80px" }}
+            fs={{ default: "70px", s: "80px", m: "100px" }}
             fw="bold"
             m="0"
           >
             Cumplimos
           </Text>
-          <Box display="flex" mt="-10px" jc={{ default: "center", m: "left" }}>
+          <Box display="flex" mt="-15px" jc={{ default: "center", m: "left" }}>
             <Text
               ta={{ default: "center", m: "left" }}
-              fs={{ default: "50px", s: "55px", m: "80px" }}
+              fs={{ default: "70px", s: "80px", m: "100px" }}
               fw="bold"
               m="0"
               color="ui02"
@@ -111,7 +115,7 @@ const Head = () => {
             </Text>
             <Text
               ta={{ default: "center", m: "left" }}
-              fs={{ default: "50px", s: "55px", m: "80px" }}
+              fs={{ default: "70px", s: "80px", m: "100px" }}
               fw="bold"
               m="0"
             >
