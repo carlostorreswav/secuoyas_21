@@ -89,10 +89,6 @@ const Home = () => {
 const Head = () => {
   return (
     <Box b="3px solid black" mw="1224px" m="0 auto">
-      <link
-        href="http://fonts.cdnfonts.com/css/gilroy-bold"
-        rel="stylesheet"
-      ></link>
       <Box position="relative" h="100%">
         <Box py="100px" px="xl" position="relative" zIndex="1">
           <Text
