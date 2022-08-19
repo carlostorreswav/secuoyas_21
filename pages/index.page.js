@@ -103,7 +103,7 @@ const Head = () => {
           >
             Cumplimos
           </Text>
-          <Box display="flex" mt="-15px" jc={{ default: "center", m: "left" }}>
+          <Box display="flex" mt="-18px" jc={{ default: "center", m: "left" }}>
             <Text
               ta={{ default: "center", m: "left" }}
               fs={{ default: "70px", s: "80px", m: "100px" }}
@@ -126,6 +126,8 @@ const Head = () => {
             ta={{ default: "center", m: "left" }}
             m={{ default: "0 auto", m: "0" }}
             mw="400px"
+            fontFamily="sans-serif"
+            fs="18px"
           >
             y lo queremos celebrar contándote 21 cosas que no sabías de
             Secuoyas.
