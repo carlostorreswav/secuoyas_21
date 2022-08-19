@@ -3,6 +3,8 @@ import { useState } from "react"
 import styled from "styled-components"
 import CardArray from "./CardArray"
 
+//392 x 532
+
 const Card = props => {
   console.log("Card props", props)
   const { front, back } = props
@@ -11,7 +13,7 @@ const Card = props => {
   return (
     <Box
       position="relative"
-      height="450px"
+      height="532px"
       style={{ perspective: "1000px" }}
       onClick={() => setisFront(!isFront)}
       w="100%"
@@ -37,7 +39,7 @@ const CustomBox = styled(Box)`
   top: 0;
   left: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  height: 450px;
+  height: 532px;
   border: 3px solid black;
   margin: -3px;
   transform-style: preserve-3d;
@@ -59,12 +61,17 @@ const Home = () => {
         </Box>
       </Link>
       <Box display="flex" jc="center" my="xxxl">
-        <Box maxWidth="1200px" w="100%" mx="xl">
+        <Box maxWidth="1400px" w="100%" mx="xl" mt="10px">
           <Head />
 
-          <Box display="flex" flexWrap="wrap" jc="center" w="100%">
+          <Box display="flex" flexWrap="wrap" jc="center" w="100%" mt="10px">
             {CardArray.map((card, index) => (
-              <Box w={{ default: "100%", s: "50%", l: "33.33%" }} key={index}>
+              <Box
+                // w={{ default: "100%", s: "50%", l: "33.33%" }}
+                w="392px"
+                m="10px"
+                key={index}
+              >
                 <Card3D factorY={40} factorX={20} zoom={1.1}>
                   <Card {...card} />
                 </Card3D>
