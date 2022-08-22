@@ -21,7 +21,7 @@ const Card = props => {
     >
       <Box style={{ transformStyle: "preserve-3d" }}>
         <CustomBox
-          b={todayCard ? "3px solid red" : "3px solid black"}
+          b={todayCard ? "3px solid #E55140" : "3px solid black"}
           transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}
         >
           {front}
