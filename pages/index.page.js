@@ -1,12 +1,12 @@
 const { Box, Text, Card3D, Image, Link } = require("@impulse/components")
 import { useState } from "react"
 import styled from "styled-components"
-import CardArray from "./CardArray"
+import CardArray from "./CardArray2"
 
 //392 x 532
 
 const Card = props => {
-  console.log("Card props", props)
+  // console.log("Card props", props)
   const { front, back } = props
   const [isFront, setisFront] = useState(true)
 
@@ -49,7 +49,7 @@ const CustomBox = styled(Box)`
 `
 
 const Home = () => {
-  CardArray.map(card => console.log("card", card))
+  // CardArray.map(card => console.log("card", card))
   return (
     <Box>
       <Box maxWidth="1224px" w="100%" m="0 auto" mt="10px">
