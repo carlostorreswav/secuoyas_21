@@ -91,7 +91,7 @@ const SocialIcon = ({ src }) => {
         p="xs"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        mr="s"
+        mr="xs"
       >
         <Icon src={src} h={40} w={40} color={hover ? "#E55140" : "white"} />
       </Box>
