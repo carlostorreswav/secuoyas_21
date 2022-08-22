@@ -21,14 +21,17 @@ const Card = props => {
     >
       <Box style={{ transformStyle: "preserve-3d" }}>
         <CustomBox
-          b={todayCard && "3px solid red !important"}
+          b={todayCard ? "3px solid red" : "3px solid black"}
           transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}
         >
           {front}
         </CustomBox>
       </Box>
       <Box style={{ transformStyle: "preserve-3d" }}>
-        <CustomBox transform={!isFront ? "rotateY(-0deg)" : "rotateY(-180deg)"}>
+        <CustomBox
+          b={"3px solid white"}
+          transform={!isFront ? "rotateY(-0deg)" : "rotateY(-180deg)"}
+        >
           {back}
         </CustomBox>
       </Box>
@@ -43,13 +46,17 @@ const CustomBox = styled(Box)`
   left: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   height: 532px;
-  border: 3px solid black;
+
   margin: -3px;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #fff;
 `
+
+const Footer = () => {
+  return <Box>Footer</Box>
+}
 
 const Home = () => {
   // CardArray.map(card => console.log("card", card))
@@ -90,6 +97,7 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </Box>
   )
 }
