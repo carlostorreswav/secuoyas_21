@@ -1,13 +1,7 @@
 import { Box, Text } from "@impulse/components"
-import { useRef } from "react"
 import styled from "styled-components"
 
 const MainBox = styled(Box)`
-  height: 100%;
-`
-
-const MainBoxBack = styled(Box)`
-  position: absolute;
   height: 100%;
 `
 
