@@ -7,7 +7,7 @@ import CardArray from "./CardArray2"
 
 const Card = props => {
   // console.log("Card props", props)
-  const { front, back } = props
+  const { front, back, unlocked, todayCard } = props
   const [isFront, setisFront] = useState(true)
 
   return (
@@ -15,12 +15,15 @@ const Card = props => {
       position="relative"
       height="532px"
       style={{ perspective: "1000px" }}
-      onClick={() => setisFront(!isFront)}
+      onClick={() => unlocked && setisFront(!isFront)}
       w="100%"
-      cursor="pointer"
+      cursor={unlocked && "pointer"}
     >
       <Box style={{ transformStyle: "preserve-3d" }}>
-        <CustomBox transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}>
+        <CustomBox
+          b={todayCard && "3px solid red !important"}
+          transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}
+        >
           {front}
         </CustomBox>
       </Box>
@@ -74,7 +77,12 @@ const Home = () => {
                 m="12px"
                 key={index}
               >
-                <Card3D factorY={40} factorX={20} zoom={1.1}>
+                <Card3D
+                  factorY={40}
+                  factorX={20}
+                  zoom={1.1}
+                  active={card.unlocked ? true : false}
+                >
                   <Card {...card} />
                 </Card3D>
               </Box>

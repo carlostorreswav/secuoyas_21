@@ -17,21 +17,19 @@ const Card = ({ number, back, date }) => {
   const now = new Date()
   const cardDate = new Date(date)
 
-  const isUnlocked = cb => {
-    if (now > cardDate) {
-      cb()
-    }
-  }
+  const unlocked = now > cardDate
+  const todayCard = now.getDate() === cardDate.getDate()
 
   const Front = (
     <MainBox
       onMouseEnter={() =>
-        isUnlocked(() => document.getElementById(`card${number}`).play())
+        unlocked && document.getElementById(`card${number}`).play()
       }
       onMouseLeave={() =>
-        isUnlocked(() => document.getElementById(`card${number}`).pause())
+        unlocked && document.getElementById(`card${number}`).pause()
       }
       position="relative"
+      style={{ filter: !unlocked && "blur(10px)" }}
     >
       <Box position="absolute" width="100%" height="100%" zIndex="1">
         <Box display="flex" jc="space-between" w="90%" p="m">
@@ -59,7 +57,7 @@ const Card = ({ number, back, date }) => {
     </MainBox>
   )
 
-  return { front: Front, back: Back }
+  return { front: Front, back: Back, unlocked, todayCard }
 }
 
 const CardArray = [
