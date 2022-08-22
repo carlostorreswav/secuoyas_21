@@ -1,5 +1,8 @@
-import { Box, Text } from "@impulse/components"
+import { Box, Icon, Link, Text } from "@impulse/components"
+import { AiOutlineTwitter } from "react-icons/ai"
+import { FaLinkedinIn, FaShareAlt } from "react-icons/fa"
 import styled from "styled-components"
+import { useState } from "react"
 
 const MainBox = styled(Box)`
   height: 100%;
@@ -61,15 +64,39 @@ const Card = ({ number, back, date }) => {
           </Text>
         </Box>
         <Box mt="m">
-          <Text ta="left" fs="l" m="0" fontFamily="Work Sans">
+          <Text ta="left" fs="l" m="0" fontFamily="Work Sans" mb="xxl">
             {back}
           </Text>
         </Box>
+      </Box>
+      <Box position="absolute" bottom="0" m="s" display="flex">
+        <SocialIcon src={AiOutlineTwitter} />
+        <SocialIcon src={FaLinkedinIn} />
       </Box>
     </MainBox>
   )
 
   return { front: Front, back: Back, unlocked, todayCard }
+}
+
+const SocialIcon = ({ src }) => {
+  const [hover, setHover] = useState(false)
+  return (
+    <Link>
+      <Box
+        display="flex"
+        b={"3px solid white"}
+        bg={hover && "white"}
+        br="50%"
+        p="xs"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        mr="s"
+      >
+        <Icon src={src} h={40} w={40} color={hover ? "#E55140" : "white"} />
+      </Box>
+    </Link>
+  )
 }
 
 const Lorem = num => {

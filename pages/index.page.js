@@ -1,7 +1,7 @@
 const { Box, Text, Card3D, Image, Link } = require("@impulse/components")
 import { useState } from "react"
 import styled from "styled-components"
-import CardArray from "./CardArray2"
+import CardArray from "./CardArray"
 import MetaHead from "./MetaHead"
 import Head from "./Head"
 import Footer from "./Footer"
@@ -62,7 +62,7 @@ const Home = () => {
   return (
     <>
       <MetaHead />
-      <Box maxWidth="1400px" mx="xl" w="100%" mt="10px">
+      <Box maxWidth="1400px" w="100%" mx="xl" mt="10px">
         <Link href="https://secuoyas.com">
           <Box display="flex" ai="center" mt="l">
             <Image src="media/headLogo.png" />
