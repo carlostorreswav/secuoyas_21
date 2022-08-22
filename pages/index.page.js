@@ -2,6 +2,7 @@ const { Box, Text, Card3D, Image, Link } = require("@impulse/components")
 import { useState } from "react"
 import styled from "styled-components"
 import CardArray from "./CardArray2"
+import MetaHead from "./MetaHead"
 
 //392 x 532
 
@@ -61,44 +62,47 @@ const Footer = () => {
 const Home = () => {
   // CardArray.map(card => console.log("card", card))
   return (
-    <Box>
-      <Box maxWidth="1224px" w="100%" m="0 auto" mt="10px">
-        <Link href="https://secuoyas.com">
-          <Box display="flex" ai="center" mt="l">
-            <Image src="media/headLogo.png" />
-            <Text ta="left" fs="xl" fw="bold" m="0" ml="xs" color="black">
-              innovation by desing
-            </Text>
-          </Box>
-        </Link>
-      </Box>
-      <Box display="flex" jc="center" my="xxxl">
-        <Box maxWidth="1400px" w="100%" mx="xl" mt="10px">
-          <Head />
+    <>
+      <MetaHead />
+      <Box>
+        <Box maxWidth="1224px" w="100%" m="0 auto" mt="10px">
+          <Link href="https://secuoyas.com">
+            <Box display="flex" ai="center" mt="l">
+              <Image src="media/headLogo.png" />
+              <Text ta="left" fs="xl" fw="bold" m="0" ml="xs" color="black">
+                innovation by desing
+              </Text>
+            </Box>
+          </Link>
+        </Box>
+        <Box display="flex" jc="center" my="xxxl">
+          <Box maxWidth="1400px" w="100%" mx="xl" mt="10px">
+            <Head />
 
-          <Box display="flex" flexWrap="wrap" jc="center" w="100%" mt="10px">
-            {CardArray.map((card, index) => (
-              <Box
-                // w={{ default: "100%", s: "50%", l: "33.33%" }}
-                w="392px"
-                m="12px"
-                key={index}
-              >
-                <Card3D
-                  factorY={40}
-                  factorX={20}
-                  zoom={1.1}
-                  active={card.unlocked ? true : false}
+            <Box display="flex" flexWrap="wrap" jc="center" w="100%" mt="10px">
+              {CardArray.map((card, index) => (
+                <Box
+                  // w={{ default: "100%", s: "50%", l: "33.33%" }}
+                  w="392px"
+                  m="12px"
+                  key={index}
                 >
-                  <Card {...card} />
-                </Card3D>
-              </Box>
-            ))}
+                  <Card3D
+                    factorY={40}
+                    factorX={20}
+                    zoom={1.1}
+                    active={card.unlocked ? true : false}
+                  >
+                    <Card {...card} />
+                  </Card3D>
+                </Box>
+              ))}
+            </Box>
           </Box>
         </Box>
+        <Footer />
       </Box>
-      <Footer />
-    </Box>
+    </>
   )
 }
 
