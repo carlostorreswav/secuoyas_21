@@ -13,11 +13,24 @@ const Video = styled.video`
   object-position: center;
 `
 
-const Card = ({ number, back }) => {
+const Card = ({ number, back, date }) => {
+  const now = new Date()
+  const cardDate = new Date(date)
+
+  const isUnlocked = cb => {
+    if (now > cardDate) {
+      cb()
+    }
+  }
+
   const Front = (
     <MainBox
-      onMouseEnter={() => document.getElementById(`card${number}`).play()}
-      onMouseLeave={() => document.getElementById(`card${number}`).pause()}
+      onMouseEnter={() =>
+        isUnlocked(() => document.getElementById(`card${number}`).play())
+      }
+      onMouseLeave={() =>
+        isUnlocked(() => document.getElementById(`card${number}`).pause())
+      }
       position="relative"
     >
       <Box position="absolute" width="100%" height="100%" zIndex="1">
@@ -50,16 +63,27 @@ const Card = ({ number, back }) => {
 }
 
 const CardArray = [
-  Card({ number: "01", back: "back01" }),
-  Card({ number: "02", back: "back02" }),
-  Card({ number: "03", back: "back03" }),
-  Card({ number: "04", back: "back04" }),
-  Card({ number: "05", back: "back05" }),
-  Card({ number: "06", back: "back06" }),
-  Card({ number: "07", back: "back07" }),
-  Card({ number: "08", back: "back08" }),
-  Card({ number: "09", back: "back09" }),
-  Card({ number: "10", back: "back10" }),
+  Card({ number: "01", back: "back", date: "8/01/2022" }),
+  Card({ number: "02", back: "back", date: "8/02/2022" }),
+  Card({ number: "03", back: "back", date: "8/05/2022" }),
+  Card({ number: "04", back: "back", date: "8/06/2022" }),
+  Card({ number: "05", back: "back", date: "8/07/2022" }),
+  Card({ number: "06", back: "back", date: "8/08/2022" }),
+  Card({ number: "07", back: "back", date: "8/09/2022" }),
+  Card({ number: "08", back: "back", date: "8/12/2022" }),
+  Card({ number: "09", back: "back", date: "8/13/2022" }),
+  Card({ number: "10", back: "back", date: "8/14/2022" }),
+  Card({ number: "11", back: "back", date: "8/15/2022" }),
+  Card({ number: "12", back: "back", date: "8/16/2022" }),
+  Card({ number: "13", back: "back", date: "8/19/2022" }),
+  Card({ number: "14", back: "back", date: "8/20/2022" }),
+  Card({ number: "15", back: "back", date: "8/21/2022" }),
+  Card({ number: "16", back: "back", date: "8/22/2022" }),
+  Card({ number: "17", back: "back", date: "8/23/2022" }),
+  Card({ number: "18", back: "back", date: "8/26/2022" }),
+  Card({ number: "19", back: "back", date: "8/27/2022" }),
+  Card({ number: "20", back: "back", date: "8/28/2022" }),
+  Card({ number: "21", back: "back", date: "8/29/2022" }),
 ]
 
 console.log("CardArray", CardArray)
