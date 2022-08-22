@@ -47,7 +47,7 @@ const Card = ({ number, back, date }) => {
         </Box>
       </Box>
       <Box position="absolute" bottom="-0px" height="100%" zIndex="0">
-        <Video autoPlay loop width="100%" height="100%" id={`card${number}`}>
+        <Video loop width="100%" height="100%" id={`card${number}`}>
           <source src={`video/card_${number}.mov`} type="video/mp4" />
         </Video>
       </Box>
