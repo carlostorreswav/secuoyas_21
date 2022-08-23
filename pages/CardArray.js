@@ -37,10 +37,10 @@ const Card = ({ number, back, date }) => {
     >
       <Box position="absolute" width="100%" height="100%" zIndex="1">
         <Box display="flex" jc="space-between" p="l" mt="s">
-          <Text fs="xl" m="0" fontFamily="Work Sans">
+          <Text fs="xl" m="0" fontFamily="Gilroy" fw="600">
             DATO
           </Text>
-          <Text fs="xl" m="0" fontFamily="Work Sans">
+          <Text fs="xl" m="0" fontFamily="Gilroy" fw="600">
             {number}
           </Text>
         </Box>
@@ -58,10 +58,10 @@ const Card = ({ number, back, date }) => {
       <Box position="absolute" p="l" mt="s">
         <Text ta="center" fs="xl" fw="bold" m="0" color="ui01"></Text>
         <Box display="flex" jc="space-between">
-          <Text ta="center" fs="xl" m="0">
+          <Text ta="center" fs="xl" m="0" fontFamily="Gilroy" fw="600">
             ¿SABÍAS QUE...
           </Text>
-          <Text ta="center" fs="xl" m="0">
+          <Text ta="center" fs="xl" m="0" fontFamily="Gilroy" fw="600">
             {number}
           </Text>
         </Box>
@@ -78,7 +78,7 @@ const Card = ({ number, back, date }) => {
         px="m"
         py="s"
         display="flex"
-        right="0"
+        jc="right"
       >
         <SocialIcon src={AiOutlineTwitter} type="twitter" text={back} />
         <SocialIcon src={FaLinkedinIn} type="linkedIn" text={back} />
