@@ -21,11 +21,13 @@ const Card = props => {
       onClick={() => unlocked && setisFront(!isFront)}
       w="100%"
       cursor={unlocked && "pointer"}
+      pointerEvents={unlocked ? "auto" : "none"}
     >
       <Box style={{ transformStyle: "preserve-3d" }}>
         <CustomBox
           b={todayCard ? "3px solid #E55140" : "3px solid black"}
           transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}
+          style={{ filter: !unlocked && "blur(10px)" }}
         >
           {front}
         </CustomBox>
@@ -58,7 +60,10 @@ const CustomBox = styled(Box)`
 `
 
 const Home = () => {
-  // CardArray.map(card => console.log("card", card))
+  const unlocked = card => new Date() > new Date(card.date)
+  const todayCard = card =>
+    new Date().getDate() === new Date(card.date).getDate()
+
   return (
     <>
       <MetaHead />
@@ -78,19 +83,18 @@ const Home = () => {
 
           <Box display="flex" flexWrap="wrap" jc="center" w="100%" mt="10px">
             {CardArray.map((card, index) => (
-              <Box
-                // w={{ default: "100%", s: "50%", l: "33.33%" }}
-                w="392px"
-                m="12px"
-                key={index}
-              >
+              <Box w="392px" m="12px" key={index}>
                 <Card3D
                   factorY={40}
                   factorX={20}
                   zoom={1.1}
-                  active={card.unlocked ? true : false}
+                  active={unlocked(card) ? true : false}
                 >
-                  <Card {...card} />
+                  <Card
+                    {...card}
+                    unlocked={unlocked(card)}
+                    todaycard={todayCard(card)}
+                  />
                 </Card3D>
               </Box>
             ))}

@@ -16,22 +16,18 @@ const Video = styled.video`
 `
 
 const Card = ({ number, back, date }) => {
-  const now = new Date()
-  const cardDate = new Date(date)
+  // const now = new Date()
+  // const cardDate = new Date(date)
 
-  const unlocked = now > cardDate
-  const todayCard = now.getDate() === cardDate.getDate()
+  // const unlocked = now > cardDate
+  // const todayCard = now.getDate() === cardDate.getDate()
 
   const Front = (
     <MainBox
-      onMouseEnter={() =>
-        unlocked && document.getElementById(`card${number}`).play()
-      }
-      onMouseLeave={() =>
-        unlocked && document.getElementById(`card${number}`).pause()
-      }
+      onMouseEnter={() => document.getElementById(`card${number}`).play()}
+      onMouseLeave={() => document.getElementById(`card${number}`).pause()}
       position="relative"
-      style={{ filter: !unlocked && "blur(10px)" }}
+      // style={{ filter: !unlocked && "blur(10px)" }}
     >
       <Box position="absolute" width="100%" height="100%" zIndex="1">
         <Box display="flex" jc="space-between" p="l" mt="s">
@@ -76,7 +72,7 @@ const Card = ({ number, back, date }) => {
     </MainBox>
   )
 
-  return { front: Front, back: Back, unlocked, todayCard }
+  return { front: Front, back: Back, date }
 }
 
 const SocialIcon = ({ src }) => {
@@ -129,7 +125,5 @@ const CardArray = [
   Card({ number: "20", back: Lorem(4), date: "8/28/2022" }),
   Card({ number: "21", back: Lorem(5), date: "8/29/2022" }),
 ]
-
-console.log("CardArray", CardArray)
 
 export default CardArray
