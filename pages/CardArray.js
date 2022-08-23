@@ -107,12 +107,12 @@ const SocialIcon = ({ src, type, text }) => {
         b={"3px solid white"}
         bg={hover && "white"}
         br="50%"
-        p={hover ? "16px" : "8px"}
-        m={hover ? "0px" : "8px"}
+        p={hover ? "20px" : "10px"}
+        m={hover ? "0px" : "10px"}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        <Icon src={src} h={35} w={35} color={hover ? "#E55140" : "white"} />
+        <Icon src={src} h={30} w={30} color={hover ? "#E55140" : "white"} />
       </Box>
     </Link>
   )
