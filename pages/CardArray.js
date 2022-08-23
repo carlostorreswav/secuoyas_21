@@ -59,13 +59,13 @@ const Card = ({ number, back, date }) => {
             {number}
           </Text>
         </Box>
-        <Box mt="m">
-          <Text ta="left" fs="l" m="0" fontFamily="Work Sans" mb="xxl">
+        <Box mt="m" maxHeight="340px" overflow="hidden">
+          <Text ta="left" fs="l" m="0" fontFamily="Work Sans">
             {back}
           </Text>
         </Box>
       </Box>
-      <Box position="absolute" bottom="0" m="s" display="flex">
+      <Box position="absolute" bottom="0" px="l" py="s" display="flex">
         <SocialIcon src={AiOutlineTwitter} />
         <SocialIcon src={FaLinkedinIn} />
       </Box>
@@ -89,7 +89,7 @@ const SocialIcon = ({ src }) => {
         onMouseLeave={() => setHover(false)}
         mr="xs"
       >
-        <Icon src={src} h={40} w={40} color={hover ? "#E55140" : "white"} />
+        <Icon src={src} h={35} w={35} color={hover ? "#E55140" : "white"} />
       </Box>
     </Link>
   )
