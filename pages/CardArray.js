@@ -65,7 +65,7 @@ const Card = ({ number, back, date }) => {
           </Text>
         </Box>
       </Box>
-      <Box position="absolute" bottom="0" px="l" py="s" display="flex">
+      <Box position="absolute" bottom="0" px="m" py="s" display="flex">
         <SocialIcon src={AiOutlineTwitter} />
         <SocialIcon src={FaLinkedinIn} />
       </Box>
@@ -84,10 +84,10 @@ const SocialIcon = ({ src }) => {
         b={"3px solid white"}
         bg={hover && "white"}
         br="50%"
-        p="xs"
+        p={hover ? "16px" : "8px"}
+        m={hover ? "0px" : "8px"}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        mr="xs"
       >
         <Icon src={src} h={35} w={35} color={hover ? "#E55140" : "white"} />
       </Box>

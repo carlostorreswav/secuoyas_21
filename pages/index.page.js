@@ -17,7 +17,7 @@ const Card = props => {
     <Box
       position="relative"
       height="532px"
-      style={{ perspective: "1000px" }}
+      style={{ perspective: "1000px", filter: !unlocked && "blur(4px)" }}
       onClick={() => unlocked && setisFront(!isFront)}
       w="100%"
       cursor={unlocked && "pointer"}
@@ -27,7 +27,7 @@ const Card = props => {
         <CustomBox
           b={todayCard ? "3px solid #E55140" : "3px solid black"}
           transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}
-          style={{ filter: !unlocked && "blur(10px)" }}
+          style={{ filter: !unlocked && "blur(4px)" }}
         >
           {front}
         </CustomBox>

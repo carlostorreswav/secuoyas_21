@@ -6,8 +6,8 @@ import { SiMedium } from "react-icons/si"
 
 const Footer = () => {
   return (
-    <Box mw="1280px" m="0 auto">
-      <Box b="3px solid black" p="xxl" m="m">
+    <Box mw="1230px" m="0 auto">
+      <Box b="3px solid black" p="xxl" my="xxxl">
         <Box mw="700px">
           <Text fs="xxl" fw="normal" ff="Gilroy-Bold">
             Somos 100% remotos
