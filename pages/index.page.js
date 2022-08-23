@@ -79,7 +79,7 @@ const Home = () => {
           </Link>
         </Box>
       </Box>
-      <Box display="flex" jc="center" my="xxxl">
+      <Box display="flex" jc="center" mb="xxxl">
         <Box maxWidth="1400px" m="0 auto" w="100%" mx="xl" mt="0px">
           <Head />
 
