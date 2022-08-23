@@ -78,7 +78,7 @@ const Card = ({ number, back, date }) => {
         px="m"
         py="s"
         display="flex"
-        jc="right"
+        right="0"
       >
         <SocialIcon src={AiOutlineTwitter} type="twitter" text={back} />
         <SocialIcon src={FaLinkedinIn} type="linkedIn" text={back} />
