@@ -21,7 +21,7 @@ const shareTwitter = text =>
 const shareLinkedIn = text =>
   `https://www.linkedin.com/shareArticle?mini=true&url=${text}&title=${text}&summary=${text}&source=${text}`
 
-const Card = ({ number, back, date }) => {
+const Card = ({ number, back, date, position }) => {
   // const now = new Date()
   // const cardDate = new Date(date)
 
@@ -35,14 +35,30 @@ const Card = ({ number, back, date }) => {
       position="relative"
       // style={{ filter: !unlocked && "blur(10px)" }}
     >
-      <Box position="absolute" width="100%" height="100%" zIndex="1">
-        <Box display="flex" jc="space-between" p="l" mt="s">
-          <Text fs="xl" m="0" fontFamily="Gilroy" fw="600">
-            DATO
-          </Text>
-          <Text fs="xl" m="0" fontFamily="Gilroy" fw="600">
-            {number}
-          </Text>
+      <Box
+        // position="absolute"
+        height="100%"
+        zIndex="1"
+        // bottom={position === "down" && 0}
+        // bottom="0"
+        width="100%"
+        position="relative"
+      >
+        <Box
+          position="absolute"
+          bottom={position === "down" && "0"}
+          width="100%"
+
+          // mt="s"
+        >
+          <Box display="flex" jc="space-between" m="l" my="xl">
+            <Text fs="xl" m="0" fontFamily="Gilroy" fw="600">
+              DATO
+            </Text>
+            <Text fs="xl" m="0" fontFamily="Gilroy" fw="600">
+              {number}
+            </Text>
+          </Box>
         </Box>
       </Box>
       <Box position="absolute" bottom="-0px" height="100%" zIndex="0">
@@ -127,27 +143,27 @@ const Lorem = num => {
 }
 
 const CardArray = [
-  Card({ number: "01", back: Lorem(1), date: "8/01/2022" }),
-  Card({ number: "02", back: Lorem(2), date: "8/02/2022" }),
-  Card({ number: "03", back: Lorem(3), date: "8/05/2022" }),
-  Card({ number: "04", back: Lorem(4), date: "8/06/2022" }),
-  Card({ number: "05", back: Lorem(5), date: "8/07/2022" }),
-  Card({ number: "06", back: Lorem(4), date: "8/08/2022" }),
-  Card({ number: "07", back: Lorem(3), date: "8/09/2022" }),
-  Card({ number: "08", back: Lorem(2), date: "8/12/2022" }),
-  Card({ number: "09", back: Lorem(1), date: "8/13/2022" }),
-  Card({ number: "10", back: Lorem(2), date: "8/14/2022" }),
-  Card({ number: "11", back: Lorem(3), date: "8/15/2022" }),
-  Card({ number: "12", back: Lorem(4), date: "8/16/2022" }),
-  Card({ number: "13", back: Lorem(5), date: "8/19/2022" }),
-  Card({ number: "14", back: Lorem(4), date: "8/20/2022" }),
-  Card({ number: "15", back: Lorem(3), date: "8/21/2022" }),
-  Card({ number: "16", back: Lorem(2), date: "8/22/2022" }),
-  Card({ number: "17", back: Lorem(1), date: "8/23/2022" }),
-  Card({ number: "18", back: Lorem(2), date: "8/26/2022" }),
-  Card({ number: "19", back: Lorem(3), date: "8/27/2022" }),
-  Card({ number: "20", back: Lorem(4), date: "8/28/2022" }),
-  Card({ number: "21", back: Lorem(5), date: "8/29/2022" }),
+  Card({ number: "01", back: Lorem(1), date: "8/01/2022", position: "up" }),
+  Card({ number: "02", back: Lorem(2), date: "8/02/2022", position: "up" }),
+  Card({ number: "03", back: Lorem(3), date: "8/05/2022", position: "up" }),
+  Card({ number: "04", back: Lorem(4), date: "8/06/2022", position: "down" }),
+  Card({ number: "05", back: Lorem(5), date: "8/07/2022", position: "down" }),
+  Card({ number: "06", back: Lorem(4), date: "8/08/2022", position: "down" }),
+  Card({ number: "07", back: Lorem(3), date: "8/09/2022", position: "up" }),
+  Card({ number: "08", back: Lorem(2), date: "8/12/2022", position: "up" }),
+  Card({ number: "09", back: Lorem(1), date: "8/13/2022", position: "up" }),
+  Card({ number: "10", back: Lorem(2), date: "8/14/2022", position: "down" }),
+  Card({ number: "11", back: Lorem(3), date: "8/15/2022", position: "down" }),
+  Card({ number: "12", back: Lorem(4), date: "8/16/2022", position: "down" }),
+  Card({ number: "13", back: Lorem(5), date: "8/19/2022", position: "up" }),
+  Card({ number: "14", back: Lorem(4), date: "8/20/2022", position: "up" }),
+  Card({ number: "15", back: Lorem(3), date: "8/21/2022", position: "up" }),
+  Card({ number: "16", back: Lorem(2), date: "8/22/2022", position: "down" }),
+  Card({ number: "17", back: Lorem(1), date: "8/23/2022", position: "down" }),
+  Card({ number: "18", back: Lorem(2), date: "8/26/2022", position: "down" }),
+  Card({ number: "19", back: Lorem(3), date: "8/27/2022", position: "up" }),
+  Card({ number: "20", back: Lorem(4), date: "8/28/2022", position: "up" }),
+  Card({ number: "21", back: Lorem(5), date: "8/29/2022", position: "up" }),
 ]
 
 export default CardArray
