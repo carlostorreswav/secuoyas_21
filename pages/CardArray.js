@@ -15,6 +15,12 @@ const Video = styled.video`
   object-position: center;
 `
 
+const shareTwitter = text =>
+  `https://twitter.com/intent/tweet?text=${text}&hashtags=secuoyas&via=secuoyas`
+
+const shareLinkedIn = text =>
+  `https://www.linkedin.com/shareArticle?mini=true&url=${text}&title=${text}&summary=${text}&source=${text}`
+
 const Card = ({ number, back, date }) => {
   // const now = new Date()
   // const cardDate = new Date(date)
@@ -65,9 +71,16 @@ const Card = ({ number, back, date }) => {
           </Text>
         </Box>
       </Box>
-      <Box position="absolute" bottom="0" px="m" py="s" display="flex">
-        <SocialIcon src={AiOutlineTwitter} />
-        <SocialIcon src={FaLinkedinIn} />
+      <Box
+        position="absolute"
+        zIndex="2"
+        bottom="0"
+        px="m"
+        py="s"
+        display="flex"
+      >
+        <SocialIcon src={AiOutlineTwitter} type="twitter" text={back} />
+        <SocialIcon src={FaLinkedinIn} type="linkedIn" text={back} />
       </Box>
     </MainBox>
   )
@@ -75,10 +88,20 @@ const Card = ({ number, back, date }) => {
   return { front: Front, back: Back, date }
 }
 
-const SocialIcon = ({ src }) => {
+const SocialIcon = ({ src, type, text }) => {
   const [hover, setHover] = useState(false)
+
+  const getHREF = (type, text) => {
+    if (type === "twitter") {
+      return shareTwitter(text)
+    }
+    if (type === "linkedIn") {
+      return shareLinkedIn(text)
+    }
+  }
+
   return (
-    <Link>
+    <Link href={getHREF(type, text)}>
       <Box
         display="flex"
         b={"3px solid white"}
