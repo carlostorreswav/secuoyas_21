@@ -71,9 +71,17 @@ const Home = () => {
         <Box mw="1280px" m="0 auto">
           <Link href="https://secuoyas.com">
             <Box display="flex" ai="center" m="m">
-              <Image src="media/headLogo.png" />
-              <Text ta="left" fs="xl" fw="bold" m="0" ml="xs" color="black">
-                innovation by desing
+              <Image src="media/headLogo.png" h={35} w={35} />
+              <Text
+                ta="left"
+                fw="600"
+                ff="Gilroy"
+                fs="24px"
+                m="0"
+                ml="12px"
+                color="black"
+              >
+                innovation by design
               </Text>
             </Box>
           </Link>

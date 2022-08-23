@@ -44,10 +44,10 @@ const Head = () => {
           </Text>
         </Box>
         <Box display={{ default: "none", m: "block" }}>
-          <Box position="absolute" bottom="-6px" right="1px">
+          <Box position="absolute" bottom="-4px" right="1px">
             <Image src="media/head1.png" />
           </Box>
-          <Box position="absolute" bottom="-6px" right="1px">
+          <Box position="absolute" bottom="-4px" right="1px">
             <Image src="media/head2.png" />
           </Box>
         </Box>

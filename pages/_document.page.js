@@ -12,6 +12,14 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           ></link>
           <link
+            href="https://fonts.cdnfonts.com/css/gilroy-medium"
+            rel="stylesheet"
+          ></link>
+          <link
+            rel="stylesheet"
+            href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
+          ></link>
+          <link
             href="https://fonts.cdnfonts.com/css/work-sans"
             rel="stylesheet"
           ></link>

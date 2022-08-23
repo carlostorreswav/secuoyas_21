@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     position: relative;
-    font-family: 'Work Sans', 'Gilroy-Bold', sans-serif;
+    font-family: 'Work Sans', 'Gilroy', sans-serif;
       /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 
