@@ -8,16 +8,18 @@ const Head = () => {
           <Text
             ta={{ default: "center", m: "left" }}
             fs={{ default: "70px", s: "80px", m: "100px" }}
-            fw="bold"
+            ff="Gilroy"
+            fw="800"
             m="0"
           >
             Cumplimos
           </Text>
-          <Box display="flex" mt="-18px" jc={{ default: "center", m: "left" }}>
+          <Box display="flex" mt="-24px" jc={{ default: "center", m: "left" }}>
             <Text
               ta={{ default: "center", m: "left" }}
               fs={{ default: "70px", s: "80px", m: "100px" }}
-              fw="bold"
+              ff="Gilroy"
+              fw="800"
               m="0"
               color="ui02"
             >
@@ -26,7 +28,8 @@ const Head = () => {
             <Text
               ta={{ default: "center", m: "left" }}
               fs={{ default: "70px", s: "80px", m: "100px" }}
-              fw="bold"
+              ff="Gilroy"
+              fw="800"
               m="0"
             >
               años
@@ -36,8 +39,8 @@ const Head = () => {
             ta={{ default: "center", m: "left" }}
             m={{ default: "0 auto", m: "0" }}
             mw="400px"
-            fontFamily="Work Sans"
-            fs="18px"
+            ff="Gilroy"
+            fs="19px"
           >
             y lo queremos celebrar contándote 21 cosas que no sabías de
             Secuoyas.
