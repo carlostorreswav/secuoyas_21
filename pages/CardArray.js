@@ -19,7 +19,7 @@ const shareTwitter = text =>
   `https://twitter.com/intent/tweet?text=${text}&hashtags=secuoyas&via=secuoyas`
 
 const shareLinkedIn = text =>
-  `https://www.linkedin.com/shareArticle?mini=true&url=${text}&title=${text}&summary=${text}&source=${text}`
+  `https://www.linkedin.com/sharing/share-offsite/?url=${process.env.URL}`
 
 const Card = ({ number, back, date, position }) => {
   // const now = new Date()
