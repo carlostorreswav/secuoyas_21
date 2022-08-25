@@ -60,7 +60,8 @@ const CustomBox = styled(Box)`
 `
 
 const Home = () => {
-  const unlocked = card => new Date() > new Date(card.date)
+  // const unlocked = card => new Date() > new Date(card.date)
+  const unlocked = card => true
   const todayCard = card =>
     new Date().getDate() === new Date(card.date).getDate()
 
