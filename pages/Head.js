@@ -50,7 +50,7 @@ const Head = () => {
           <Box position="absolute" bottom="-4px" right="1px">
             <Image src="media/head1.png" />
           </Box>
-          <Box position="absolute" bottom="-4px" right="1px">
+          <Box position="absolute" bottom="-4px" right="-30px">
             <Image src="media/head2.png" />
           </Box>
         </Box>
