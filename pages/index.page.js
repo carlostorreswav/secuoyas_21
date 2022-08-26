@@ -79,7 +79,7 @@ const Home = () => {
     <>
       <MetaHead />
       <Box maxWidth="1400px" w="100%" m="0 auto" mt="10px">
-        <Box mw="1280px" m="0 auto">
+        <Box mw="1200px" m="0 auto">
           <Link href="https://secuoyas.com">
             <Box display="flex" ai="center" m="m">
               <Image src="media/headLogo.png" h={35} w={35} />
