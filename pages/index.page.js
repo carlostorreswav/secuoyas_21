@@ -8,6 +8,14 @@ import Footer from "./Footer"
 
 //392 x 532
 
+const h1 = "532px"
+const h2 = "476px"
+const w1 = "392px"
+const w2 = "360px"
+
+const cardHeight = h2
+const cardWidth = w2
+
 const Card = props => {
   // console.log("Card props", props)
   const { front, back, unlocked, todayCard } = props
@@ -16,7 +24,8 @@ const Card = props => {
   return (
     <Box
       position="relative"
-      height="532px"
+      // height="532px"
+      height={cardHeight}
       style={{ perspective: "1000px", filter: !unlocked && "blur(4px)" }}
       onClick={() => unlocked && setisFront(!isFront)}
       w="100%"
@@ -25,7 +34,7 @@ const Card = props => {
     >
       <Box style={{ transformStyle: "preserve-3d" }}>
         <CustomBox
-          b={todayCard ? "3px solid #E55140" : "3px solid black"}
+          b={todayCard ? "3px solid #EE4444" : "3px solid black"}
           transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}
           style={{ filter: !unlocked && "blur(4px)" }}
         >
@@ -50,7 +59,7 @@ const CustomBox = styled(Box)`
   top: 0;
   left: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  height: 532px;
+  height: ${cardHeight};
 
   margin: -3px;
   transform-style: preserve-3d;
@@ -95,7 +104,12 @@ const Home = () => {
 
           <Box display="flex" flexWrap="wrap" jc="center" w="100%" mt="10px">
             {CardArray.map((card, index) => (
-              <Box w="392px" m="12px" key={index}>
+              <Box
+                // w="392px"
+                w={cardWidth}
+                m="16px"
+                key={index}
+              >
                 <Card3D
                   factorY={40}
                   factorX={20}
