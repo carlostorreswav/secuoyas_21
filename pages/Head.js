@@ -42,8 +42,7 @@ const Head = () => {
             ff="Gilroy"
             fs="19px"
           >
-            y lo queremos celebrar contándote 21 cosas que no sabías de
-            Secuoyas.
+            y lo queremos celebrar contándote 21 cosas que no sabías de Secuoyas
           </Text>
         </Box>
         <Box display={{ default: "none", m: "block" }}>
