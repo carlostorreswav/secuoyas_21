@@ -26,10 +26,6 @@ const Card = props => {
       position="relative"
       // height="532px"
       height={cardHeight}
-      style={{
-        perspective: "1000px",
-        filter: (!unlocked && "blur(4px)") || "none",
-      }}
       onClick={() => unlocked && setisFront(!isFront)}
       w="100%"
       cursor={(unlocked && "pointer") || "auto"}
@@ -39,9 +35,19 @@ const Card = props => {
         <CustomBox
           b="3px solid #101010"
           transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}
-          style={{ filter: !unlocked && "blur(4px)" }}
         >
-          {front}
+          <Box
+            width={unlocked ? "100%" : "98%"}
+            height={unlocked ? "100%" : "98%"}
+            ml={unlocked ? "0" : "1%"}
+            mt={unlocked ? "0" : "1%"}
+            style={{
+              perspective: "1000px",
+              filter: (!unlocked && "blur(4px)") || "none",
+            }}
+          >
+            {front}
+          </Box>
         </CustomBox>
       </Box>
       <Box style={{ transformStyle: "preserve-3d" }}>
@@ -73,11 +79,8 @@ const CustomBox = styled(Box)`
 
 const Home = () => {
   const now = new Date()
-  const unlocked = card => {
-    console.log(now, card.date, new Date(card.date))
-    console.log(now > new Date(card.date))
-    return now > new Date(card.date) || now < new Date("8/30/22")
-  }
+  const unlocked = card =>
+    now > new Date(card.date) || now < new Date("8/30/22")
 
   return (
     <>

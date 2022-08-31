@@ -21,7 +21,8 @@ const Head = () => {
               ff="Gilroy"
               fw="800"
               m="0"
-              color="ui02"
+              color="ui01"
+              style={{ "-webkit-text-stroke": "3px #101010" }}
             >
               21&nbsp;
             </Text>
