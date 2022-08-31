@@ -62,7 +62,7 @@ const Card = ({ number, back, date, position }) => {
         </Box>
       </Box>
       <Box position="absolute" bottom="-0px" height="100%" zIndex="0">
-        <Video loop width="100%" height="100%" id={`card${number}`}>
+        <Video muted loop width="100%" height="100%" id={`card${number}`}>
           <source src={`video/card_${number}.mov`} type="video/mp4" />
         </Video>
       </Box>
@@ -70,7 +70,7 @@ const Card = ({ number, back, date, position }) => {
   )
 
   const Back = (
-    <MainBox bg="ui02" color="white" position="relative" overflow="hidden">
+    <MainBox bg="#101010" color="white" position="relative" overflow="hidden">
       <Box position="absolute" p="l" mt="s">
         <Text ta="center" fs="xl" fw="bold" m="0" color="ui01"></Text>
         <Box display="flex" jc="space-between">
@@ -129,7 +129,7 @@ const SocialIcon = ({ src, type, text }) => {
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        <Icon src={src} h={30} w={30} color={hover ? "#EE4444" : "white"} />
+        <Icon src={src} h={30} w={30} color={hover ? "#101010" : "white"} />
       </Box>
     </Link>
   )

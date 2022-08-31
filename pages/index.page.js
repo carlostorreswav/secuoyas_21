@@ -18,7 +18,7 @@ const cardWidth = w2
 
 const Card = props => {
   // console.log("Card props", props)
-  const { front, back, unlocked, todayCard } = props
+  const { front, back, unlocked } = props
   const [isFront, setisFront] = useState(true)
 
   return (
@@ -26,15 +26,18 @@ const Card = props => {
       position="relative"
       // height="532px"
       height={cardHeight}
-      style={{ perspective: "1000px", filter: !unlocked && "blur(4px)" }}
+      style={{
+        perspective: "1000px",
+        filter: (!unlocked && "blur(4px)") || "none",
+      }}
       onClick={() => unlocked && setisFront(!isFront)}
       w="100%"
-      cursor={unlocked && "pointer"}
+      cursor={(unlocked && "pointer") || "auto"}
       pointerEvents={unlocked ? "auto" : "none"}
     >
       <Box style={{ transformStyle: "preserve-3d" }}>
         <CustomBox
-          b={todayCard ? "3px solid #EE4444" : "3px solid black"}
+          b="3px solid #101010"
           transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}
           style={{ filter: !unlocked && "blur(4px)" }}
         >
@@ -70,10 +73,11 @@ const CustomBox = styled(Box)`
 
 const Home = () => {
   const now = new Date()
-  const unlocked = card =>
-    now > new Date(card.date) || now < new Date("8/30/22")
-  const todayCard = card =>
-    new Date().getDate() === new Date(card.date).getDate()
+  const unlocked = card => {
+    console.log(now, card.date, new Date(card.date))
+    console.log(now > new Date(card.date))
+    return now > new Date(card.date) || now < new Date("8/30/22")
+  }
 
   return (
     <>
@@ -116,11 +120,7 @@ const Home = () => {
                   zoom={1.1}
                   active={unlocked(card) ? true : false}
                 >
-                  <Card
-                    {...card}
-                    unlocked={unlocked(card)}
-                    todaycard={todayCard(card)}
-                  />
+                  <Card {...card} unlocked={unlocked(card)} />
                 </Card3D>
               </Box>
             ))}
