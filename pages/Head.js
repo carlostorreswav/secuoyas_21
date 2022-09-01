@@ -21,17 +21,21 @@ const Head = () => {
         <Box p="xl" position="relative" zIndex="1">
           <Text
             ta={{ default: "center", m: "left" }}
-            fs={{ default: "70px", s: "80px", m: "100px" }}
+            fs={{ default: "50px", s: "80px", m: "100px" }}
             ff="Gilroy"
             fw="800"
             m="0"
           >
             Cumplimos
           </Text>
-          <Box display="flex" mt="-24px" jc={{ default: "center", m: "left" }}>
+          <Box
+            display="flex"
+            mt={{ default: "-4px", s: "-24px" }}
+            jc={{ default: "center", m: "left" }}
+          >
             <Text
               ta={{ default: "center", m: "left" }}
-              fs={{ default: "70px", s: "80px", m: "100px" }}
+              fs={{ default: "50px", s: "80px", m: "100px" }}
               ff="Gilroy"
               fw="800"
               m="0"
@@ -42,7 +46,7 @@ const Head = () => {
             </Text>
             <Text
               ta={{ default: "center", m: "left" }}
-              fs={{ default: "70px", s: "80px", m: "100px" }}
+              fs={{ default: "50px", s: "80px", m: "100px" }}
               ff="Gilroy"
               fw="800"
               m="0"

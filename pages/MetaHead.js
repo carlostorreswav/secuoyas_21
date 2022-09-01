@@ -51,6 +51,10 @@ const MetaHead = () => {
       <meta property="og:description" content={description} key="ogdesc" />
 
       <title>{"21 años 🎉 Secuoyas"}</title>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
     </Head>
   )
 }
