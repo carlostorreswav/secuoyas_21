@@ -9,7 +9,7 @@ const MetaHead = () => {
   return (
     <Head>
       {/* Twitter */}
-      <meta name="twitter:card" content="summary" key="twcard" />
+      <meta name="twitter:card" content="summary_large_image" key="twcard" />
       <meta name="twitter:site" content="secuoyas-21" key="twsite" />
       <meta name="twitter:title" content={title} key="twtitle" />
       <meta
