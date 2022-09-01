@@ -7,7 +7,14 @@ import { SiMedium } from "react-icons/si"
 const Footer = () => {
   return (
     <Box mw="1150px" m="0 auto">
-      <Box b="3px solid black" p="xxl" my="xxxl">
+      <Box
+        b="3px solid black"
+        p="xxl"
+        my="xxxl"
+        style={{
+          boxSizing: "border-box",
+        }}
+      >
         <Box mw="700px">
           <Text fs="xxl" fw="normal" ff="Gilroy-Bold">
             Somos 100% remotos
@@ -18,8 +25,15 @@ const Footer = () => {
             lado para ser un equipo!
           </Text>
         </Box>
-        <Box display="flex" ai="end" jc="space-between" mt="l">
-          <Box mr="l" mt="m">
+
+        <Box
+          display="flex"
+          flexDirection={{ default: "column", m: "row" }}
+          ai={{ m: "end" }}
+          jc="space-between"
+          mt="l"
+        >
+          <Box mr="l" my="m">
             <Text fw="bold" fs="l">
               Madrid
             </Text>
@@ -33,7 +47,7 @@ const Footer = () => {
               Calle Torregalindo, 1. 28016 - Madrid
             </Text>
           </Box>
-          <Box mr="l" mt="m">
+          <Box mr="l" my="m">
             <Text fw="bold" fs="l">
               Munich
             </Text>
@@ -47,7 +61,7 @@ const Footer = () => {
               Franzstrasse, 15. 82140 Olching - Munich
             </Text>
           </Box>
-          <Box>
+          <Box my="m">
             <MediaIcon
               icon={AiOutlineTwitter}
               href="https://twitter.com/secuoyas"

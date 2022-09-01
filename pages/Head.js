@@ -8,9 +8,17 @@ const Video = styled.video`
 
 const Head = () => {
   return (
-    <Box b="3px solid black" mw="1144px" m="0 auto">
+    <Box
+      b="3px solid black"
+      mw="1144px"
+      m="0 auto"
+      h={{ default: "auto", m: "530px" }}
+      style={{
+        boxSizing: "border-box",
+      }}
+    >
       <Box position="relative" h="100%">
-        <Box py="130px" px="xl" position="relative" zIndex="1">
+        <Box p="xl" position="relative" zIndex="1">
           <Text
             ta={{ default: "center", m: "left" }}
             fs={{ default: "70px", s: "80px", m: "100px" }}
@@ -49,8 +57,11 @@ const Head = () => {
             ff="Gilroy"
             fs="19px"
           >
-            y lo queremos celebrar contándote 21 cosas que no sabías de
-            Secuoyas.
+            y lo queremos celebrar contándote
+            <br />
+            21 cosas que no sabías
+            <br />
+            de Secuoyas.
           </Text>
         </Box>
         <Box display={{ default: "none", m: "block" }}>

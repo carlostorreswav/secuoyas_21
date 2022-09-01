@@ -6,25 +6,16 @@ import MetaHead from "./MetaHead"
 import Head from "./Head"
 import Footer from "./Footer"
 
-//392 x 532
-
-const h1 = "532px"
-const h2 = "476px"
-const w1 = "392px"
-const w2 = "360px"
-
-const cardHeight = h2
-const cardWidth = w2
+const cardHeight = "476px"
+const cardWidth = "360px"
 
 const Card = props => {
-  // console.log("Card props", props)
   const { front, back, unlocked } = props
   const [isFront, setisFront] = useState(true)
 
   return (
     <Box
       position="relative"
-      // height="532px"
       height={cardHeight}
       onClick={() => unlocked && setisFront(!isFront)}
       w="100%"
@@ -35,6 +26,9 @@ const Card = props => {
         <CustomBox
           b="3px solid #101010"
           transform={isFront ? "rotateY(0deg)" : "rotateY(180deg)"}
+          style={{
+            boxSizing: "border-box",
+          }}
         >
           <Box
             width={unlocked ? "100%" : "98%"}
@@ -52,8 +46,11 @@ const Card = props => {
       </Box>
       <Box style={{ transformStyle: "preserve-3d" }}>
         <CustomBox
-          b={"3px solid white"}
+          b="none"
           transform={!isFront ? "rotateY(-0deg)" : "rotateY(-180deg)"}
+          style={{
+            boxSizing: "border-box",
+          }}
         >
           {back}
         </CustomBox>
@@ -70,7 +67,6 @@ const CustomBox = styled(Box)`
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   height: ${cardHeight};
 
-  margin: -3px;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -90,52 +86,59 @@ const Home = () => {
   return (
     <>
       <MetaHead />
-      <Box maxWidth="1400px" w="100%" m="0 auto" mt="10px">
-        <Box mw="1200px" m="0 auto">
-          <Link href="https://secuoyas.com">
-            <Box display="flex" ai="center" m="m">
-              <Image src="media/headLogo.png" h={35} w={35} />
-              <Text
-                ta="left"
-                fw="600"
-                ff="Gilroy"
-                fs="24px"
-                m="0"
-                ml="12px"
-                color="black"
-              >
-                innovation by design
-              </Text>
-            </Box>
-          </Link>
-        </Box>
-      </Box>
-      <Box display="flex" jc="center" mb="xxxl">
-        <Box maxWidth="1400px" m="0 auto" w="100%" mx="xl" mt="0px">
-          <Head />
-
-          <Box display="flex" flexWrap="wrap" jc="center" w="100%" mt="10px">
-            {CardArray.map((card, index) => (
-              <Box
-                // w="392px"
-                w={cardWidth}
-                m="16px"
-                key={index}
-              >
-                <Card3D
-                  factorY={40}
-                  factorX={20}
-                  zoom={1.1}
-                  active={unlocked(card) ? true : false}
+      <Box display="flex" jc="center">
+        <Box
+          maxWidth="1400px"
+          m="0 auto"
+          w="100%"
+          px={{ default: "s", s: "xl" }}
+          mt="10px"
+        >
+          <Box mw="1144px" m="0 auto">
+            <Link href="https://secuoyas.com">
+              <Box display="flex" ai="center" my="m">
+                <Image src="media/headLogo.png" h={35} w={35} />
+                <Text
+                  ta="left"
+                  fw="600"
+                  ff="Gilroy"
+                  fs="24px"
+                  m="0"
+                  ml="12px"
+                  color="black"
                 >
-                  <Card {...card} unlocked={unlocked(card)} />
-                </Card3D>
+                  innovation by design
+                </Text>
               </Box>
-            ))}
+            </Link>
           </Box>
         </Box>
       </Box>
-      <Footer />
+
+      <Box maxWidth="1400px" m="0 auto" w="100%" mt="0px">
+        <Box px={{ default: "s", s: "xl" }}>
+          <Head />
+        </Box>
+
+        <Box display="flex" flexWrap="wrap" jc="center" w="100%" mt="10px">
+          {CardArray.map((card, index) => (
+            <Box w={{ default: "100%", s: cardWidth }} m="16px" key={index}>
+              <Card3D
+                factorY={40}
+                factorX={20}
+                zoom={1.1}
+                active={unlocked(card) ? true : false}
+              >
+                <Card {...card} unlocked={unlocked(card)} />
+              </Card3D>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+
+      <Box px={{ default: "s", s: "xl" }}>
+        <Footer />
+      </Box>
     </>
   )
 }
