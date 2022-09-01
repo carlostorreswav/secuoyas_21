@@ -1,3 +1,4 @@
+import Script from "next/script"
 const { Box, Text, Card3D, Image, Link } = require("@impulse/components")
 import { useState, useEffect } from "react"
 import styled from "styled-components"
@@ -86,6 +87,22 @@ const Home = () => {
   return (
     <>
       <MetaHead />
+
+      {/* Global site tag (gtag.js) - Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=GTM-TFN4TZ"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'GTM-TFN4TZ');
+        `}
+      </Script>
+
       <Box display="flex" jc="center">
         <Box
           maxWidth="1400px"
@@ -95,14 +112,14 @@ const Home = () => {
           mt="10px"
         >
           <Box mw="1144px" m="0 auto">
-            <Link href="https://secuoyas.com">
+            <Link href="https://secuoyas.com" noUnderline>
               <Box display="flex" ai="center" my="m">
-                <Image src="media/headLogo.png" h={35} w={35} />
+                <Image src="media/headLogo.png" h={40} w={40} />
                 <Text
                   ta="left"
                   fw="600"
                   ff="Gilroy"
-                  fs="24px"
+                  fs="20px"
                   m="0"
                   ml="12px"
                   color="black"
@@ -115,7 +132,7 @@ const Home = () => {
         </Box>
       </Box>
 
-      <Box maxWidth="1400px" m="0 auto" w="100%" mt="0px">
+      <Box maxWidth="1400px" m="0 auto" w="100%" mt="0px" overflow="hidden">
         <Box px={{ default: "s", s: "xl" }}>
           <Head />
         </Box>

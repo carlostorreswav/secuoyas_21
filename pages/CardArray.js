@@ -18,7 +18,7 @@ const Video = styled.video`
 const shareTwitter = text =>
   `https://twitter.com/intent/tweet?text=${text}&hashtags=secuoyas&via=secuoyas`
 
-const shareLinkedIn = text =>
+const shareLinkedIn = () =>
   `https://www.linkedin.com/sharing/share-offsite/?url=${process.env.URL}`
 
 const Card = ({ number, back, date, position }) => {
@@ -139,7 +139,7 @@ const SocialIcon = ({ src, type, text }) => {
       return shareTwitter(`¿Sabías que ${text}`)
     }
     if (type === "linkedIn") {
-      return shareLinkedIn(`¿Sabías que ${text}`)
+      return shareLinkedIn()
     }
   }
 

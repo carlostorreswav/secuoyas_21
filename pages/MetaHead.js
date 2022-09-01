@@ -51,10 +51,10 @@ const MetaHead = () => {
       <meta property="og:image" content={image} key="ogimage" />
       <meta property="og:site_name" content={url} key="ogsitename" />
       <meta property="og:title" content={title} key="ogtitle" />
-      <meta name="description" content={description} />
       <meta property="og:description" content={description} key="ogdesc" />
 
       <title>{"21 años 🎉 Secuoyas"}</title>
+      <meta name="description" content={description} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
