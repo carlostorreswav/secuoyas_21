@@ -16,10 +16,10 @@ const Video = styled.video`
 `
 
 const shareTwitter = text =>
-  `https://twitter.com/intent/tweet?text=${text}&hashtags=secuoyas&via=secuoyas`
+  `https://twitter.com/intent/tweet?text=${text}&url=${process.env.URL}&hashtags=secuoyas&via=secuoyas`
 
-const shareLinkedIn = () =>
-  `https://www.linkedin.com/sharing/share-offsite/?url=${process.env.URL}`
+const shareLinkedIn = text =>
+  `https://www.linkedin.com/shareArticle?mini=true&text=${text}&url=${process.env.URL}`
 
 const Card = ({ number, back, date, position }) => {
   // const now = new Date()
@@ -139,7 +139,7 @@ const SocialIcon = ({ src, type, text }) => {
       return shareTwitter(`¿Sabías que ${text}`)
     }
     if (type === "linkedIn") {
-      return shareLinkedIn()
+      return shareLinkedIn(`¿Sabías que ${text}`)
     }
   }
 
