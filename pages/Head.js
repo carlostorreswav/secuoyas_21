@@ -1,4 +1,10 @@
-import { Box, Image, Text } from "@impulse/components"
+import { Box, Text } from "@impulse/components"
+import styled from "styled-components"
+
+const Video = styled.video`
+  object-fit: cover;
+  object-position: right;
+`
 
 const Head = () => {
   return (
@@ -48,11 +54,16 @@ const Head = () => {
           </Text>
         </Box>
         <Box display={{ default: "none", m: "block" }}>
-          <Box position="absolute" bottom="-4px" right="1px">
-            <Image src="media/head1.png" />
-          </Box>
-          <Box position="absolute" bottom="-4px" right="-30px">
-            <Image src="media/head2.png" />
+          <Box
+            position="absolute"
+            top="0"
+            right="-1px"
+            width="100%"
+            height="100%"
+          >
+            <Video autoPlay muted loop width="100%" height="100%">
+              <source src={`media/hero.mov`} type="video/mp4" />
+            </Video>
           </Box>
         </Box>
       </Box>
