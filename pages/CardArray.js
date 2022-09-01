@@ -136,10 +136,10 @@ const SocialIcon = ({ src, type, text }) => {
 
   const getHREF = (type, text) => {
     if (type === "twitter") {
-      return shareTwitter(text)
+      return shareTwitter(`¿Sabías que ${text}`)
     }
     if (type === "linkedIn") {
-      return shareLinkedIn(text)
+      return shareLinkedIn(`¿Sabías que ${text}`)
     }
   }
 
