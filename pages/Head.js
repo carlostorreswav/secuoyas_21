@@ -22,7 +22,7 @@ const Head = () => {
               fw="800"
               m="0"
               color="ui01"
-              style={{ "-webkit-text-stroke": "3px #101010" }}
+              style={{ WebkitTextStroke: "3px #101010" }}
             >
               21&nbsp;
             </Text>

@@ -1,5 +1,5 @@
 const { Box, Text, Card3D, Image, Link } = require("@impulse/components")
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styled from "styled-components"
 import CardArray from "./CardArray"
 import MetaHead from "./MetaHead"
@@ -78,7 +78,12 @@ const CustomBox = styled(Box)`
 `
 
 const Home = () => {
-  const now = new Date()
+  const [now, setNow] = useState(new Date())
+
+  useEffect(() => {
+    setNow(new Date())
+  }, [])
+
   const unlocked = card =>
     now > new Date(card.date) || now < new Date("8/30/22")
 
