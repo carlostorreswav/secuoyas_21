@@ -57,7 +57,7 @@ const Head = () => {
           <Box
             position="absolute"
             top="0"
-            right="-1px"
+            right="0px"
             width="100%"
             height="100%"
           >
