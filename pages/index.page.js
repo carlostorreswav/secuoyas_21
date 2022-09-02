@@ -75,14 +75,10 @@ const CustomBox = styled(Box)`
 `
 
 const Home = () => {
-  const [now, setNow] = useState(new Date())
-
-  useEffect(() => {
-    setNow(new Date())
-  }, [])
-
-  const unlocked = card =>
-    now > new Date(card.date) || now < new Date("8/30/22")
+  const unlocked = card => {
+    const now = new Date()
+    return now > new Date(card.date) || now < new Date("8/30/22")
+  }
 
   return (
     <>
