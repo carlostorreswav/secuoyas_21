@@ -17,12 +17,19 @@ const Footer = () => {
       >
         <Box mw="700px">
           <Text fs="xxl" fw="normal" ff="Gilroy-Bold">
-            Somos 100% remotos
+            Somos Secuoyas.
           </Text>
           <Text m="0" mt="m">
-            Madrid, Valencia, Murcia, Cuenca, Toledo, Ciudad Real, Valladolid,
-            Segovia, Castellón, Tarragona, Munich... ¡No hace falta estar al
-            lado para ser un equipo!
+            Un estudio de diseño estratégico e innovación liderado por un equipo
+            de 56 profesionales empáticos, curiosos e inconformistas. Tenemos
+            bagajes y talentos muy distintos, unidos por una sólida cultura que
+            llevamos más de 20 años construyendo.
+          </Text>
+          <Text m="0" mt="m">
+            Barcelona, Cantabria, Cork, Cuenca, Gotemburgo, Jerez, Madrid,
+            Munich, Palma de Mallorca, Segovia, Valencia, Valladolid… Trabajamos
+            codo con codo desde cualquier parte del mundo, siendo responsables
+            con nuestro trabajo y confiando ciegamente los unos en los otros.
           </Text>
         </Box>
 
