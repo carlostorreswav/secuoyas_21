@@ -13,15 +13,20 @@ const cardWidth = "360px"
 const Card = props => {
   const { front, back, unlocked } = props
   const [isFront, setisFront] = useState(true)
+  const [isUnlocked, setIsUnlocked] = useState(false)
+
+  useEffect(() => {
+    setIsUnlocked(unlocked)
+  }, [unlocked])
 
   return (
     <Box
       position="relative"
       height={cardHeight}
-      onClick={() => unlocked && setisFront(!isFront)}
+      onClick={() => isUnlocked && setisFront(!isFront)}
       w="100%"
-      cursor={(unlocked && "pointer") || "auto"}
-      pointerEvents={unlocked ? "auto" : "none"}
+      cursor={(isUnlocked && "pointer") || "auto"}
+      pointerEvents={isUnlocked ? "auto" : "none"}
     >
       <Box style={{ transformStyle: "preserve-3d" }}>
         <CustomBox
@@ -32,13 +37,13 @@ const Card = props => {
           }}
         >
           <Box
-            width={unlocked ? "100%" : "98%"}
-            height={unlocked ? "100%" : "98%"}
-            ml={unlocked ? "0" : "1%"}
-            mt={unlocked ? "0" : "1%"}
+            width={isUnlocked ? "100%" : "98%"}
+            height={isUnlocked ? "100%" : "98%"}
+            ml={isUnlocked ? "0" : "1%"}
+            mt={isUnlocked ? "0" : "1%"}
             style={{
               perspective: "1000px",
-              filter: (!unlocked && "blur(4px)") || "none",
+              filter: (!isUnlocked && "blur(4px)") || "none",
             }}
           >
             {front}
