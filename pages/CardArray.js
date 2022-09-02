@@ -53,7 +53,7 @@ const Card = ({ number, back, date, position }) => {
         >
           <Box display="flex" jc="space-between" m="l" my="xl">
             <Text fs="xl" m="0" fontFamily="Gilroy" fw="600">
-              DATO
+              CURIOSIDAD
             </Text>
             <Text fs="xl" m="0" fontFamily="Gilroy" fw="600">
               {number}
