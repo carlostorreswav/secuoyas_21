@@ -169,7 +169,7 @@ const Lorem = num => {
 }
 
 const Texts = {
-  c01: "nacimos el 11 de septiembre de 2001? Todo el mundo se acuerda qué estaba haciendo ese día.",
+  c01: "nacimos el 11 de septiembre de 2001? Todo el mundo se acuerda de qué estaba haciendo ese día.",
   c02: "cuando se fundó la compañía nos llamábamos Secuoyas Experience? Es curioso porque hace 21 años nadie hablaba de experiencia de usuario y nosotros tampoco lo hacíamos. Y ahora es nuestro core.",
   c03: "tenemos pasados muy heterogéneos? Pastelera creativa, portero, militar, concursante de Masterchef, compositor musical, ingeniero de un equipo de Rallyes, periodista… Un background muy amplio que nos convierte en un equipo multidisciplinar.",
   c04: "en 2020 éramos 26 personas en Secuoyas y hoy somos 56? En dos años el equipo se ha multiplicado, especialmente el área de desarrollo, en la cual empezaron siendo 3 developers y hoy suman 19.",
