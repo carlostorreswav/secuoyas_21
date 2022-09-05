@@ -82,7 +82,7 @@ const CustomBox = styled(Box)`
 const Home = () => {
   const unlocked = card => {
     const now = new Date()
-    return now > new Date(card.date) || now < new Date("8/30/22")
+    return now > new Date(card.date) || now < new Date("10/30/22")
   }
 
   return (
@@ -133,7 +133,14 @@ const Home = () => {
         </Box>
       </Box>
 
-      <Box maxWidth="1400px" m="0 auto" w="100%" mt="0px" overflow="hidden">
+      <Box
+        maxWidth="1400px"
+        w="100%"
+        m="0 auto"
+        mt="0px"
+        pb="xxxl"
+        overflow="hidden"
+      >
         <Box px={{ default: "s", s: "xl" }}>
           <Head />
         </Box>

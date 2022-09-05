@@ -6,11 +6,11 @@ import { SiMedium } from "react-icons/si"
 
 const Footer = () => {
   return (
-    <Box mw="1150px" m="0 auto">
+    <Box mw="1144px" m="0 auto">
       <Box
         b="3px solid black"
         p="xxl"
-        my="xxxl"
+        mb="xxxl"
         style={{
           boxSizing: "border-box",
         }}
