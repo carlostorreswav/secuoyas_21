@@ -82,7 +82,7 @@ const CustomBox = styled(Box)`
 const Home = () => {
   const unlocked = card => {
     const now = new Date()
-    return now > new Date(card.date) || now < new Date("10/30/22")
+    return now > new Date(card.date) || now < new Date("8/30/22")
   }
 
   return (
