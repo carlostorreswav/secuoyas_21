@@ -170,7 +170,7 @@ const Lorem = num => {
 
 const Texts = {
   c01: "nacimos el 11 de septiembre de 2001? Todo el mundo se acuerda de qué estaba haciendo ese día.",
-  c02: "cuando se fundó la compañía nos llamábamos Secuoyas Experience? Es curioso porque hace 21 años nadie hablaba de experiencia de usuario y nosotros tampoco lo hacíamos. Y ahora es nuestro core.",
+  c02: "la “S” al revés de nuestro logo no es solo una cuestión estética? Simboliza un cambio de enfoque, visión y filosofía de trabajo. Así, en lugar de tomar decisiones o resolver problemas en función de lo que establece la mayoría, preferimos reflexionar, mirar las cosas desde diferentes puntos de vista y actuar bajo nuestro propio criterio.",
   c03: "tenemos pasados muy heterogéneos? Pastelera creativa, portero, militar, concursante de Masterchef, compositor musical, ingeniero de un equipo de Rallyes, periodista… Un background muy amplio que nos convierte en un equipo multidisciplinar.",
   c04: "en 2020 éramos 26 personas en Secuoyas y hoy somos 56? En dos años el equipo se ha multiplicado, especialmente el área de desarrollo, en la cual empezaron siendo 3 developers y hoy suman 19.",
   c05: "no publicamos nunca ofertas de empleo? Nos lleva más tiempo, pero preferimos salir a buscarte.",
@@ -189,7 +189,7 @@ const Texts = {
   c18: "antes de incorporar a una persona a Secuoyas se consulta con el equipo por si alguien tiene algo en contra? ¡Como en las bodas!",
   c19: "en Secuoyas reservamos un 20% de nuestro tiempo para explorar y probar cosas nuevas? Hemos diseñado distintos modelos de aprendizaje para que podamos combinar nuestra jornada laboral con formaciones tanto para el equipo como para uno mismo.",
   c20: "en 2021 incorporamos el departamento de data en la compañía y a día de hoy cuenta con 4 expertos en la materia?",
-  c21: "la “S” al revés de nuestro logo no es solo una cuestión estética? Simboliza un cambio de enfoque, visión y filosofía de trabajo. Así, en lugar de tomar decisiones o resolver problemas en función de lo que establece la mayoría, preferimos reflexionar, mirar las cosas desde diferentes puntos de vista y actuar bajo nuestro propio criterio.",
+  c21: "-",
 }
 
 const CardArray = [
