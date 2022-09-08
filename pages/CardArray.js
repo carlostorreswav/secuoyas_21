@@ -172,7 +172,7 @@ const Texts = {
   c01: "nacimos el 11 de septiembre de 2001? Todo el mundo se acuerda de qué estaba haciendo ese día.",
   c02: "la “S” al revés de nuestro logo no es solo una cuestión estética? Simboliza un cambio de enfoque, visión y filosofía de trabajo. Así, en lugar de tomar decisiones o resolver problemas en función de lo que establece la mayoría, preferimos reflexionar, mirar las cosas desde diferentes puntos de vista y actuar bajo nuestro propio criterio.",
   c03: "tenemos pasados muy heterogéneos? Pastelera creativa, portero, militar, concursante de Masterchef, compositor musical, ingeniero de un equipo de Rallyes, periodista… Un background muy amplio que nos convierte en un equipo multidisciplinar.",
-  c04: "en 2020 éramos 26 personas en Secuoyas y hoy somos 56? En dos años el equipo se ha multiplicado, especialmente el área de desarrollo, en la cual empezaron siendo 3 developers y hoy suman 19.",
+  c04: "en 2020 éramos 26 personas en Secuoyas y hoy somos 54? En dos años el equipo se ha multiplicado, especialmente el área de desarrollo, en la cual empezaron siendo 3 developers y hoy suman 19.",
   c05: "no publicamos nunca ofertas de empleo? Nos lleva más tiempo, pero preferimos salir a buscarte.",
   c06: "a veces hay que decir no a un proyecto por el bien del equipo, y lo hemos hecho?",
   c07: "somos una empresa full remote desde hace casi 3 años? Pero antes de eso llevábamos 12 años en un formato híbrido (2 días de oficina, 3 días de teletrabajo).",
