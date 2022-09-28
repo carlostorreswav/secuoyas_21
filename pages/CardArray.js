@@ -298,25 +298,25 @@ const CardArray = [
   Card({
     number: "18",
     back: Texts.c18,
-    date: "10/03/2022",
+    date: "9/30/2022",
     position: "down",
   }),
   Card({
     number: "19",
     back: Texts.c19,
-    date: "10/04/2022",
+    date: "10/03/2022",
     position: "up",
   }),
   Card({
     number: "20",
     back: Texts.c20,
-    date: "10/05/2022",
+    date: "10/04/2022",
     position: "up",
   }),
   Card({
     number: "21",
     back: Texts.c21,
-    date: "10/06/2022",
+    date: "10/05/2022",
     position: "up",
   }),
 ]
