@@ -189,7 +189,7 @@ const Texts = {
   c18: "antes de incorporar a una persona a Secuoyas se consulta con el equipo por si alguien tiene algo en contra? ¡Como en las bodas!",
   c19: "en Secuoyas reservamos un 20% de nuestro tiempo para explorar y probar cosas nuevas? Hemos diseñado distintos modelos de aprendizaje para que podamos combinar nuestra jornada laboral con formaciones tanto para el equipo como para uno mismo.",
   c20: "en 2021 incorporamos el departamento de data en la compañía y a día de hoy cuenta con 3 expertos en la materia?",
-  c21: "-",
+  c21: "en Secuoyas equilibramos trabajo y vida personal con responsabilidad? Tenemos la confianza y la flexibilidad para organizarnos de la mejor manera posible, siento respetuosos con nuestro trabajo y con los compañeros que compartimos proyecto. Por eso no nos guiamos por horarios, y sí por objetivos.",
 }
 
 const CardArray = [
