@@ -188,7 +188,7 @@ const Texts = {
   c17: "además de los proyectos con cliente, desarrollamos proyectos propios? Griddo es el más importante de ellos, y en él trabajan permanentemente 12 personas del equipo.",
   c18: "antes de incorporar a una persona a Secuoyas se consulta con el equipo por si alguien tiene algo en contra? ¡Como en las bodas!",
   c19: "en Secuoyas reservamos un 20% de nuestro tiempo para explorar y probar cosas nuevas? Hemos diseñado distintos modelos de aprendizaje para que podamos combinar nuestra jornada laboral con formaciones tanto para el equipo como para uno mismo.",
-  c20: "en 2021 incorporamos el departamento de data en la compañía y a día de hoy cuenta con 4 expertos en la materia?",
+  c20: "en 2021 incorporamos el departamento de data en la compañía y a día de hoy cuenta con 3 expertos en la materia?",
   c21: "-",
 }
 
